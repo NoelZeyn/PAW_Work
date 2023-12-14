@@ -25,6 +25,7 @@ use App\Http\Controllers\OrderDetailsController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\PaymentsController;
 
 Route::resource('categories', CategoryController::class);
 Route::resource('inventories', InventoryController::class);
@@ -32,4 +33,5 @@ Route::resource('orders', OrderController::class);
 Route::resource('order-details', OrderDetailsController::class);
 Route::resource('products', ProductController::class);
 Route::resource('reviews', ReviewController::class);
+Route::resource('payments', PaymentsController::class);
 Route::resource('users', UserController::class);

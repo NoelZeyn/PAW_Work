@@ -3,13 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Payment;
+use App\Models\Payments;
 
-class PaymentController extends Controller
+class PaymentsController extends Controller
 {
     public function index()
     {
-        $payments = Payment::all();
+        $payments = Payments::all();
         return view('payments.index', compact('payments'));
     }
 
