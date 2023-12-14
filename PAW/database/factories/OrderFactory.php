@@ -12,7 +12,7 @@ class OrderFactory extends Factory
     public function definition(): array
     {
         return [
-            'user_id' => null, // Adjust as needed
+            'user_id' => User::factory(), // Adjust as needed
             'status' => $this->faker->randomElement(['pending', 'completed']),
         ];
     }

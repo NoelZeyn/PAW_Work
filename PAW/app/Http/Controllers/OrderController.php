@@ -2,43 +2,33 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Order;
 use Illuminate\Http\Request;
+
+use App\Models\Order;
 
 class OrderController extends Controller
 {
-    public function index()
+    public function viewHistory()
     {
-        // Your code to show all categories
+        $orders = Order::all(); // Gantilah dengan logika yang sesuai untuk menampilkan riwayat pesanan pengguna tertentu
+
+        return view('orders.history', compact('orders'));
     }
 
-    public function create()
+    public function deleteOrder($order_id)
     {
-        // Your code to show the create form
+        $order = Order::find($order_id);
+
+        if (!$order) {
+            return redirect()->route('orders.history')->with('error', 'Pesanan tidak ditemukan');
+        }
+
+        // Lakukan pengecekan apakah pengguna yang sedang login memiliki izin untuk menghapus pesanan ini
+
+        $order->delete();
+
+        return redirect()->route('orders.history')->with('success', 'Pesanan berhasil dihapus');
     }
 
-    public function store(Request $request)
-    {
-        // Your code to store a new in$Order
-    }
 
-    public function show(Order $order)
-    {
-        // Your code to show a specific in$Order
-    }
-
-    public function edit(Order $order)
-    {
-        // Your code to show the edit form
-    }
-
-    public function update(Request $request, Order $order)
-    {
-        // Your code to update a in$Order
-    }
-
-    public function destroy(Order $order)
-    {
-        // Your code to delete a in$Order
-    }
 }

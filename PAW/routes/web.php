@@ -28,7 +28,11 @@ use App\Http\Controllers\PaymentsController;
 
 Route::resource('categories', CategoryController::class);
 Route::resource('inventories', InventoryController::class);
-Route::resource('orders', OrderController::class);
+
+//tasya
+Route::get('/orders/history', [OrderController::class, 'viewHistory'])->name('orders.history');
+Route::delete('/orders/{order_id}', [OrderController::class, 'deleteOrder'])->name('orders.delete');
+
 Route::resource('products', ProductController::class);
 Route::resource('reviews', ReviewController::class);
 Route::resource('payments', PaymentsController::class);
