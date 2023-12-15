@@ -26,14 +26,13 @@
         width: 100%;
     }
     body{
-        color: var(--text-color);
+        background: #FBF3F2;
     }
     .container{
         max-width: 1068px;
         margin: auto;
         width: 100%;
     }
-    /* header */
     header{
         position: fixed;
         top: 0;
@@ -62,15 +61,15 @@
 
 .nav-links a {
     display: inline-block;
-    padding: 10px 20px; /* Adjust padding as needed */
+    padding: 10px 20px; 
     transition: background-color 0.3s, color 0.3s;
-    color: #fff; 
+    color: #FBF3F2; 
 }
 
 .nav-links a:hover {
     background: #FA991C;
     color: #032539;
-    width: 100%; /* Ensures the link covers the entire width */
+    width: 100%; 
 }
 
 
@@ -78,8 +77,8 @@
     font-size: 1.8rem;
     color: #FA991C;
     position: absolute;
-    top: 23px; /* Atur posisi dari atas */
-    right: 110px; /* Sesuaikan jarak dari kanan */
+    top: 23px; 
+    right: 110px; 
     cursor: pointer;
 }
 
@@ -87,8 +86,8 @@
     font-size: 1.8rem;
     color: #FA991C; 
     position: absolute;
-    top: 23px; /* Atur posisi dari atas */
-    right: 50px; /* Sesuaikan jarak dari kanan */
+    top: 23px;
+    right: 50px; 
     cursor: pointer;
 }
 
@@ -108,16 +107,17 @@
         font-size: 1.5rem;
         font-weight: 600;
         margin-top: 2rem;
-        color: #fff;
+        color: #FBF3F2;
     }
     section{
         padding: 4rem 0 3rem;
     }
     .section-title{
-        font-size: 1.5rem;
+        font-size: 2rem;
         font-weight: 600;
         text-align: center;
         margin-bottom: 1.5rem;
+        color: #032539;
     }
     .shop{
         margin-top: 2rem;
@@ -170,7 +170,7 @@
         margin-top: 1rem;
     }
     .cart-content {
-    color: white; /* Ini akan mengubah warna teks di dalam keranjang menjadi putih */
+    color: #FBF3F2; 
 }
     .cart-img{
         width: 100px;
@@ -210,11 +210,11 @@
     .total-title{
         font-size: 1rem;
         font-weight: 600;
-        color: #fff;
+        color: #FBF3F2;
     }
     .total-price{
         margin-left: 0.5rem;
-        color:#fff;
+        color: #FBF3F2;
     }
     .btn-buy{
         display: flex;
@@ -229,13 +229,14 @@
     }
     .btn-buy:hover{
         background: #FA991C;
+        color: #032539;
     }
     #close-cart{
         position: absolute;
         top: 1rem;
         right: 0.8rem;
         font-size: 2rem;
-        color: #fff;
+        color: #FBF3F2;
         cursor: pointer;
     }
     .cart.active{
@@ -280,8 +281,6 @@
 </head>
 <body>
 
-
-<!--HEADER-->
 <header>
     <div class="nav container">
         <a href="#" class="logo" style="color: #FA991C;">EcommerceXpresse</a>
@@ -294,7 +293,6 @@
         <i class='bx bx-cart' id="cart-icon"></i>
         <i class='bx bx-user' id="user-icon"></i>
 
-        <!-- Cart -->
         <div class="cart">
             <h2 class="cart-title">KERANJANGMU</h2>
             <div class="cart-content">
@@ -311,12 +309,9 @@
         
     </div>
     </header>
-    <!-- shop -->
     <section class="shop container">
-        <h2 class="section-title">SHOP PRODUCTS</h2>
-        <!-- content -->
+        <h2 class="section-title">PRODUK</h2>
         <div class="shop-content">
-            <!-- box 1 -->
             <div class="product-box">
                 <img src="img/jam_tangan.jpg" alt="" class="product-img">
                 <h2 class="product-title">JAM TANGAN</h2>
@@ -324,104 +319,87 @@
                 <i class='bx bxs-shopping-bag add-cart' ></i>
             </div>
 
-            <!-- box 2 -->
             <div class="product-box">
                 <img src="img/setrika.jpg" alt="" class="product-img">
                 <h2 class="product-title">SETRIKA LISTRIK</h2>
-                <span class="price">$10</span>
+                <span class="price">$15</span>
                 <i class='bx bxs-shopping-bag add-cart' ></i>
             </div>
 
-            <!-- box 3 -->
             <div class="product-box">
                 <img src="img/boneka_beruang.jpg" alt="" class="product-img">
                 <h2 class="product-title">BONEKA</h2>
-                <span class="price">$10</span>
+                <span class="price">$5</span>
                 <i class='bx bxs-shopping-bag add-cart' ></i>
             </div>
 
-            <!-- box 4 -->
             <div class="product-box">
                 <img src="img/sepatu.jpg" alt="" class="product-img">
                 <h2 class="product-title">SEPATU</h2>
-                <span class="price">$10</span>
+                <span class="price">$25</span>
                 <i class='bx bxs-shopping-bag add-cart' ></i>
             </div>
 
-            <!-- box 5 -->
             <div class="product-box">
                 <img src="img/helm.jpg" alt="" class="product-img">
                 <h2 class="product-title">HELM BOGO</h2>
-                <span class="price">$10</span>
+                <span class="price">$30</span>
                 <i class='bx bxs-shopping-bag add-cart' ></i>
             </div>
 
-            <!-- box 6 -->
             <div class="product-box">
                 <img src="img/bagpack.jpg" alt="" class="product-img">
                 <h2 class="product-title">BAGPACK</h2>
-                <span class="price">$10</span>
+                <span class="price">$80</span>
                 <i class='bx bxs-shopping-bag add-cart' ></i>
             </div>
 
-            <!-- box 7 -->
             <div class="product-box">
                 <img src="img/headphone.jpg" alt="" class="product-img">
                 <h2 class="product-title">HEADPHONE</h2>
-                <span class="price">$0</span>
+                <span class="price">$40</span>
                 <i class='bx bxs-shopping-bag add-cart' ></i>
             </div>
 
-            <!-- box 8 -->
             <div class="product-box">
                 <img src="img/kipas_angin.jpg" alt="" class="product-img">
                 <h2 class="product-title">KIPAS ANGIN</h2>
-                <span class="price">$10</span>
+                <span class="price">$35</span>
                 <i class='bx bxs-shopping-bag add-cart' ></i>
             </div>
             
         </div>
     </section>
 
-    <!-- JS -->
     <script>
-        // cart
         let cartIcon = document.querySelector("#cart-icon");
         let cart = document.querySelector(".cart");
         let closeCart = document.querySelector("#close-cart");
 
-        // open
         cartIcon.onclick = () => {
             cart.classList.add("active");
         };
-
-        // close
         closeCart.onclick = () => {
             cart.classList.remove("active");
         };
 
-        // cart working js
         if (document.readyState == "loading") {
             document.addEventListener("DOMContentLoaded", ready);
         } else {
             ready();
         }
         
-        // making function
         function ready() {
-    // remove items cart
     var removeCartButtons = document.getElementsByClassName("cart-remove");
     for (var i = 0; i < removeCartButtons.length; i++) {
         var button = removeCartButtons[i];
         button.addEventListener("click", removeCartItem);
     }
 
-    // quantity changes
     var quantityInputs = document.getElementsByClassName("cart-quantity");
 for (var i = 0; i < quantityInputs.length; i++) {
     var input = quantityInputs[i];
     input.addEventListener("change", quantityChanged);
-    // Juga tambahkan event listener 'input' untuk memantau perubahan langsung
     input.addEventListener("input", quantityChanged);
 }
     var addCart = document.getElementsByClassName("add-cart");
@@ -440,13 +418,11 @@ for (var i = 0; i < quantityInputs.length; i++) {
             updatetotal();
         }
 
-        // remove items cart
         function removeCartItem(event){
             var buttonClicked = event.target;
             buttonClicked.parentNode.parentNode.remove();
             updatetotal();
         }
-        // quantity changes
         function quantityChanged(event){
             var input = event.target;
             if(isNaN(input.value)||input.value <= 0){
@@ -467,7 +443,6 @@ for (var i = 0; i < quantityInputs.length; i++) {
     var cartShopBox = document.createElement("div");
     cartShopBox.classList.add("cart-box");
 
-    // Check if the item is already in the cart
     var cartItems = document.querySelector(".cart-content");
     var cartItemsNames = cartItems.querySelectorAll(".cart-product-title");
     for (var i = 0; i < cartItemsNames.length; i++) {
@@ -488,8 +463,6 @@ for (var i = 0; i < quantityInputs.length; i++) {
 
     cartShopBox.innerHTML = cartBoxContent;
     cartItems.appendChild(cartShopBox);
-
-    // Add event listeners after appending to the cart
     cartShopBox.querySelector(".cart-remove").addEventListener("click", removeCartItem);
     cartShopBox.querySelector(".cart-quantity").addEventListener("change", quantityChanged);
     cartShopBox.querySelector(".cart-quantity").addEventListener("input", quantityChanged);
@@ -504,8 +477,6 @@ function buyButtonClicked() {
     }
     updatetotal();
 }
-
-        // update total
         function updatetotal() {
             var cartContent = document.getElementsByClassName("cart-content")[0];
             var cartBoxes = cartContent.getElementsByClassName("cart-box");
@@ -522,9 +493,9 @@ function buyButtonClicked() {
 
                 document.getElementsByClassName("total-price")[0].innerText = "$" + total;
             }
-            let userIcon = document.querySelector("#user-icon");
+            llet userIcon = document.querySelector("#user-icon");
             userIcon.addEventListener("click", function() {
-                window.location.href = "users.index";
+                window.location.href = "{{ route('users.index') }}";
             });
     </script>
 
