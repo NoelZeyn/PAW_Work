@@ -20,6 +20,11 @@
             <li><a href="{{ route('products.index') }}">Products</a></li>
             <li><a href="{{ route('reviews.index') }}">Reviews</a></li>
             <li><a href="{{ route('users.index') }}">Users</a></li>
+            <li>
+                <a href="{{ route('keranjang.index') }}" style="position: absolute; top: 10px; right: 10px;">
+                <img src="/path/to/your/cart/logo.png" alt="Keranjang" width="50" height="50">
+            </a>
+            </li>
             <!-- Add more navigation links as needed -->
         </ul>
     </nav>
