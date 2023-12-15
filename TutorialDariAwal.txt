@@ -1,0 +1,16 @@
+clone directory github
+buka xampp hidupkan yang diperlukan
+cd PAW
+composer update
+cp .env.example .env
+php artisan migrate
+php artisan db:seed --class=CategorySeeder
+php artisan db:seed --class=InventorySeeder
+php artisan db:seed --class=OrderSeeder
+php artisan db:seed --class=ProductSeeder
+php artisan db:seed --class=ReviewSeeder
+php artisan db:seed --class=UserSeeder
+
+buka phpmyadmin bagian admin
+UPDATE categories
+SET id = category_id;

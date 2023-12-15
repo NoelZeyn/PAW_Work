@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your App Title</title>
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}"> 
-    <link rel="stylesheet" href="{{ asset('css/payments.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('css/payments.css') }}"> --}}
     <!-- Add your stylesheets, scripts, or other head content here -->
 </head>
 <body>
