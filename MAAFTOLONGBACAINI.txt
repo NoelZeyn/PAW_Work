@@ -1,0 +1,11 @@
+jika pengaksesan localhost tak bisa
+UPDATE categories
+SET id = category_id;
+
+dengan catatan setelah
+php artisan db:seed --class=CategorySeeder
+php artisan db:seed --class=InventorySeeder
+php artisan db:seed --class=OrderSeeder
+php artisan db:seed --class=ProductSeeder
+php artisan db:seed --class=ReviewSeeder
+php artisan db:seed --class=UserSeeder
