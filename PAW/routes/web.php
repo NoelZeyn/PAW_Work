@@ -24,8 +24,9 @@ Route::delete('/history/{order_id}', [OrderController::class, 'deleteOrder'])->n
 
 Route::resource('products', ProductController::class);
 Route::resource('reviews', ReviewController::class);
-Route::resource('payments', PaymentsController::class);
 
+//araya
+Route::resource('payments', PaymentsController::class);
 Route::get('/payments/{id}', 'PaymentsController@show')->name('payments.show');
 
 Route::resource('users', UserController::class);
