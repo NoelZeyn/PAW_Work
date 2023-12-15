@@ -28,6 +28,8 @@
     color: #333; /* Dark text color */
     border-collapse: collapse;
     border-spacing: 0;
+    
+    text-align: center;
 }
 
 .table th,

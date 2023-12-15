@@ -13,8 +13,6 @@ class CreateOrdersTable extends Migration
             $table->timestamp('order_date')->useCurrent();
             $table->string('status', 20)->default('pending');
             $table->timestamps();
-
-            // Add foreign key constraint
             $table->foreign('user_id')->references('user_id')->on('user');
         });
     }
