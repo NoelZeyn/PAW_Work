@@ -9,8 +9,7 @@ use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PaymentsController;
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\KeranjangController;
-
+use App\Http\Controllers\CartController;
 
 Route::post('/cart/add/', [InventoryController::class, 'add'])->name('inventory.add');
 
@@ -25,12 +24,17 @@ Route::delete('/history/{order_id}', [OrderController::class, 'deleteOrder'])->n
 
 Route::resource('products', ProductController::class);
 Route::resource('reviews', ReviewController::class);
+
+//araya
 Route::resource('payments', PaymentsController::class);
+Route::get('/payments/{id}', 'PaymentsController@show')->name('payments.show');
+
 Route::resource('users', UserController::class);
 
-//aksa
-Route::post('/keranjang/tambah', [KeranjangController::class, 'tambahKeKeranjang']);
-Route::put('/keranjang/{id}/perbarui', [KeranjangController::class, 'perbaruiItemKeranjang']);
-Route::delete('/keranjang/{id}/hapus', [KeranjangController::class, 'hapusItemKeranjang']);
+// aksa
+Route::get('/cart', [CartController::class, 'index']);
+Route::get('/cart/{id}', [CartController::class, 'show']);
+Route::put('/cart/{id}', [CartController::class, 'update']);
+Route::delete('/cart/{id}', [CartController::class, 'destroy']);
 
-Route::resource('keranjang', KeranjangController::class);
+Route::resource('cart', CartController::class);
