@@ -20,7 +20,7 @@ class PaymentsController extends Controller
 
     public function store(Request $request)
     {
-        Payment::create([
+        Payments::create([
             'order_id' => $request->order_id,
             'amount' => $request->amount,
             'payment_method' => $request->payment_method,
@@ -30,7 +30,7 @@ class PaymentsController extends Controller
 
     public function show($id)
     {
-        $payment = Payment::findOrFail($id);
-        return view('payments.show', compact('payment'));
+        $payments = Payments::findOrFail($id);
+        return view('payments.show', compact('payments'));
     }
 }
