@@ -5,6 +5,13 @@
 @section('content')
 <div class="container">
     <h1>Product Dashboard</h1>
+    <form action="{{ route('dashboard.index') }}" method="GET" class="mb-4">
+            <div class="form-group">
+                <label for="category_search">Search by Category:</label>
+                <input type="text" name="category_search" id="category_search" class="form-control" value="{{ request('category_search') }}">
+            </div>
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
 
     <table class="table">
         <thead>

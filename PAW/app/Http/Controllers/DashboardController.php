@@ -12,4 +12,5 @@ class DashboardController extends Controller
         $products = Product::with('category')->get();
         return view('dashboard.index', compact('products'));
     }
+    
 }

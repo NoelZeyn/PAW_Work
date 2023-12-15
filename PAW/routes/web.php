@@ -12,7 +12,7 @@ use App\Http\Controllers\DashboardController;
 Route::post('/cart/add/', [InventoryController::class, 'add'])->name('inventory.add');
 
 
-Route::get('/', [DashboardController::class, 'index']);
+Route::get('/', [DashboardController::class, 'index'])->name('dashboard.index');
 Route::resource('categories', CategoryController::class);
 Route::resource('inventories', InventoryController::class);
 

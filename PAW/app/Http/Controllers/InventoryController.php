@@ -45,8 +45,7 @@ class InventoryController extends Controller
     }
     public function add(Product $product)
     {
-        // Your logic to add the product to the inventory goes here
-
+        //ATURIN
         return redirect()->back()->with('success', 'Product added to inventory successfully.');
     }
 }
