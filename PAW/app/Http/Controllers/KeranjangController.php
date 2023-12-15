@@ -2,47 +2,42 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Keranjang;
 use Illuminate\Http\Request;
-use App\Models\CartItem;
-use App\Models\Product;
 
 class KeranjangController extends Controller
 {
-    public function tambahKeKeranjang(Request $request)
+    public function index()
     {
-        $product = Product::find($request->product_id);
-
-        $cartItem = CartItem::updateOrCreate(
-            [
-                'product_id' => $product->id,
-                'user_id' => auth()->user()->id,
-            ],
-            [
-                'quantity' => $request->quantity,
-            ]
-        );
-
-        return response()->json(['message' => 'Produk berhasil ditambahkan ke keranjang', 'cart_item' => $cartItem]);
+        $keranjang = Keranjang::all();
+        return view('keranjang.index', compact('keranjang'));
     }
 
-    public function perbaruiItemKeranjang(Request $request, $id)
+    public function create()
     {
-        $cartItem = CartItem::find($id);
-
-        if ($request->has('quantity')) {
-            $cartItem->quantity = $request->quantity;
-        }
-
-        $cartItem->save();
-
-        return response()->json(['message' => 'Item keranjang berhasil diperbarui', 'cart_item' => $cartItem]);
+        return view('keranjang.create');
     }
 
-    public function hapusItemKeranjang($id)
+    public function store(Request $request)
     {
-        $cartItem = CartItem::find($id);
-        $cartItem->delete();
+        Keranjang::create($request->all());
+        return redirect()->route('keranjang.index');
+    }
 
-        return response()->json(['message' => 'Item keranjang berhasil dihapus']);
+    public function edit(Keranjang $keranjang)
+    {
+        return view('keranjang.edit', compact('keranjang'));
+    }
+
+    public function update(Request $request, Keranjang $keranjang)
+    {
+        $keranjang->update($request->all());
+        return redirect()->route('keranjang.index');
+    }
+
+    public function destroy(Keranjang $keranjang)
+    {
+        $keranjang->delete();
+        return redirect()->route('keranjang.index');
     }
 }

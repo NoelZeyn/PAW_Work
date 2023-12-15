@@ -7,10 +7,24 @@ use Illuminate\Database\Eloquent\Model;
 
 class Keranjang extends Model
 {
-    protected $fillable = ['product_id', 'quantity', 'user_id'];
-    
+    use HasFactory;
+
+    protected $fillable = [
+        'product_id',
+        'name',
+        'description',
+        'price',
+        'category_id',
+        'amount', 
+    ];
+
     public function product()
     {
-        return $this->belongsTo(Product::class);
+        return $this->belongsTo(Product::class, 'product_id');
+    }
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class, 'category_id');
     }
 }
