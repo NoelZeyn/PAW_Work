@@ -29,9 +29,9 @@ Route::get('/payments/{id}', 'PaymentsController@show')->name('payments.show');
 Route::resource('users', UserController::class);
 
 // aksa
-Route::get('/keranjang', [CartController::class, 'index']);
-Route::get('/keranjang/{id}', [CartController::class, 'show']);
-Route::put('/keranjang/{id}', [CartController::class, 'update']);
-Route::delete('/keranjang/{id}', [CartController::class, 'destroy']);
+Route::get('/keranjang', [KeranjangController::class, 'index']);
+Route::get('/keranjang/{id}', [KeranjangController::class, 'show']);
+Route::put('/keranjang/{id}', [KeranjangController::class, 'update']);
+Route::delete('/keranjang/{id}', [KeranjangController::class, 'destroy']);
 
-Route::resource('keranjang', CartController::class);
+Route::resource('keranjang', KeranjangController::class);
