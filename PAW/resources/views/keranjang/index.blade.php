@@ -2,19 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Keranjang Belanja</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keranjang EcommerceXpresse</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Keranjang Belanja</h1>
-    <!-- Isi halaman keranjang belanja -->
-    
-    <!-- Contoh daftar produk yang ada di keranjang -->
-    <ul>
-        <li>Produk 1 - Harga: Rp. 100.000</li>
-        <li>Produk 2 - Harga: Rp. 150.000</li>
-        <!-- ... -->
-    </ul>
+
+
+<!--HEADER-->
+<header>
+    <div class="nav container">
+        <a href="#" class="logo">EcommerceXpresse</a>
+        <i class='bx bxs-cart' id="cart-icon"></i>
+
+    </div>
+
+<!--NAV-->
     
 </body>
 </html>
