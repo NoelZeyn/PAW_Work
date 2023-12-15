@@ -9,6 +9,7 @@ use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PaymentsController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\CartController;
 
 Route::post('/cart/add/', [InventoryController::class, 'add'])->name('inventory.add');
 
@@ -25,3 +26,13 @@ Route::resource('products', ProductController::class);
 Route::resource('reviews', ReviewController::class);
 Route::resource('payments', PaymentsController::class);
 Route::resource('users', UserController::class);
+
+// aksa
+Route::get('/carts', [CartController::class, 'index']);
+Route::get('/carts/{id}', [CartController::class, 'show']);
+Route::put('/carts/{id}', [CartController::class, 'update']);
+Route::delete('/carts/{id}', [CartController::class, 'destroy']);
+
+
+
+Route::resource('carts', CartController::class);
