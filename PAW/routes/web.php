@@ -36,4 +36,3 @@ Route::put('/keranjang/{id}', [KeranjangController::class, 'update']);
 Route::delete('/keranjang/{id}', [KeranjangController::class, 'destroy']);
 
 Route::resource('keranjang', KeranjangController::class);
-
