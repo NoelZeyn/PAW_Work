@@ -4,7 +4,7 @@
 }
 
 h1, h2, h3 {
-    color: #3498db;
+    color: #1C768F;
 }
 
 .form-group {
@@ -41,7 +41,7 @@ h1, h2, h3 {
 }
 
 .table th {
-    background-color: #3498db;
+    background-color: #1C768F;
     color: #fff;
 }
 
@@ -50,7 +50,7 @@ h1, h2, h3 {
 }
 
 .btn-primary {
-    background-color: #3498db;
+    background-color: #1C768F;
     color: #fff;
     padding: 8px 12px;
     border: none;
@@ -59,7 +59,7 @@ h1, h2, h3 {
 }
 
 .btn-primary:hover {
-    background-color: #2980b9;
+    background-color: #FA991C;
 }
 
 @media screen and (max-width: 600px) {
@@ -69,8 +69,18 @@ h1, h2, h3 {
 }
 
 nav {
-    background-color: #3498db;
+    position: relative;
+    background-color: #032539; /* Warna 032539 */
+
     padding: 10px;
+}
+.keranjang-icon {
+    position: absolute;
+    top: 10px; 
+    right: 10px;
+}
+.keranjang-icon a i {
+    color: #FA991C; /* Warna FA991C */
 }
 
 nav ul {
@@ -93,7 +103,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #2980b9;
+    background-color: #1C768F;
 }
 
 nav a:hover {
@@ -102,4 +112,5 @@ nav a:hover {
 
 body {
     margin: 0;
+    background-color: #FBF3F2;
 }
