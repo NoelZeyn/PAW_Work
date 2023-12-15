@@ -20,7 +20,16 @@ class KeranjangController extends Controller
 
     public function store(Request $request)
     {
-        Keranjang::create($request->all());
+        $validated = $request->validate([
+            'product_id' => 'required',
+            'name' => 'required|max:100',
+            'description' => 'nullable',
+            'price' => 'required|numeric',
+            'category_id' => 'nullable',
+            'amount' => 'required|integer'
+        ]);
+
+        Keranjang::create($validated);
         return redirect()->route('keranjang.index');
     }
 
@@ -31,7 +40,16 @@ class KeranjangController extends Controller
 
     public function update(Request $request, Keranjang $keranjang)
     {
-        $keranjang->update($request->all());
+        $validated = $request->validate([
+            'product_id' => 'required',
+            'name' => 'required|max:100',
+            'description' => 'nullable',
+            'price' => 'required|numeric',
+            'category_id' => 'nullable',
+            'amount' => 'required|integer'
+        ]);
+
+        $keranjang->update($validated);
         return redirect()->route('keranjang.index');
     }
 
