@@ -9,16 +9,18 @@
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     
     <body>
-        @extends('layouts.app')
+        @extends('layouts.dashboard')
 
         @section('content')
         <div class="container">
             <h1>Riwayat Pesanan</h1>
 
             @if(session('success'))
-                <div class="alert alert-success">
-                    {{ session('success') }}
-                </div>
+                <script>
+                    window.onload = function() {
+                        alert("{{ session('success') }}");
+                    }
+                </script>
             @endif
 
             @if(session('error'))
