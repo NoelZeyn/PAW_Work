@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Inventory;
 use Illuminate\Http\Request;
+use App\Models\Product;
 
 class InventoryController extends Controller
 {
@@ -41,5 +42,11 @@ class InventoryController extends Controller
     public function destroy(Inventory $inventory)
     {
         // Your code to delete a in$inventory
+    }
+    public function add(Product $product)
+    {
+        // Your logic to add the product to the inventory goes here
+
+        return redirect()->back()->with('success', 'Product added to inventory successfully.');
     }
 }
