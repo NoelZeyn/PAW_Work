@@ -25,6 +25,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PaymentsController;
+use App\Http\Controllers\KeranjangController;
 
 Route::resource('categories', CategoryController::class);
 Route::resource('inventories', InventoryController::class);
@@ -37,3 +38,9 @@ Route::resource('products', ProductController::class);
 Route::resource('reviews', ReviewController::class);
 Route::resource('payments', PaymentsController::class);
 Route::resource('users', UserController::class);
+
+
+//aksa
+Route::get('/keranjang/add', [KeranjangController::class, 'tambahKeKeranjang'])->name('keranjang.add');
+Route::put('/keranjang/update/{id}', [KeranjangController::class, 'perbaruiItemKeranjang'])->name('keranjang.update');
+Route::delete('/keranjang/delete/{id}', [KeranjangController::class, 'hapusItemKeranjang'])->name('keranjang.delete');
