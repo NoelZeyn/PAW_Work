@@ -14,6 +14,7 @@
 
     <nav>
         <ul>
+        <li><a href="{{ route('dashboard.index') }}">EcommerceXpresse</a></li>
             <li><a href="{{ route('categories.index') }}">Categories</a></li>
             <li><a href="{{ route('inventories.index') }}">Inventories</a></li>
             <li><a href="{{ route('orders.history') }}">Orders</a></li>

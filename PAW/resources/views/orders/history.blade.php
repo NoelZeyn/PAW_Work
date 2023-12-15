@@ -9,16 +9,18 @@
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     
     <body>
-        @extends('layouts.app')
+        @extends('layouts.dashboard')
 
         @section('content')
-        <div class="kotak">
+        <div class="container">
             <h1>Riwayat Pesanan</h1>
 
             @if(session('success'))
-                <div class="alert alert-success">
-                    {{ session('success') }}
-                </div>
+                <script>
+                    window.onload = function() {
+                        alert("{{ session('success') }}");
+                    }
+                </script>
             @endif
 
             @if(session('error'))
@@ -43,10 +45,10 @@
                             <td>{{ $order->order_date }}</td>
                             <td>{{ $order->status }}</td>
                             <td>
-                                <form action="{{ route('orders.delete',['order_id' => $order->order_id]) }}" method="post">
-                                    @csrf    
-                                    @method('delete')
-                                    <button type="submit" class="btn btn-danger" data-orderid="{{ $order->order_id}}" >Hapus</button>
+                                <button type="button" class="btn btn-danger" onclick="confirmDelete('{{ $order->order_id }}', 'deleteForm{{ $order->order_id }}')">Hapus</button>
+                                <form action="{{ route('orders.delete',['order_id' => $order->order_id]) }}" method="post" id="deleteForm{{ $order->order_id }}">
+                                    @csrf
+                                    @method('DELETE')
                                 </form>
                             </td>
                         </tr>

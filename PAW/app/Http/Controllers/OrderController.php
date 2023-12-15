@@ -22,6 +22,7 @@ class OrderController extends Controller
         }
         $order->delete();
         return redirect()->route('orders.history')->with('success', 'Pesanan berhasil dihapus');
+        
     }
 
 
