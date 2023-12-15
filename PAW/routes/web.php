@@ -11,6 +11,7 @@ use App\Http\Controllers\PaymentsController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\KeranjangController;
 
+//Ahmad Akrom
 Route::get('/', [DashboardController::class, 'index'])->name('dashboard.index');
 Route::resource('categories', CategoryController::class);
 Route::resource('inventories', InventoryController::class);
