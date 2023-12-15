@@ -30,8 +30,8 @@ Route::resource('categories', CategoryController::class);
 Route::resource('inventories', InventoryController::class);
 
 //tasya
-Route::get('/orders/history', [OrderController::class, 'viewHistory'])->name('orders.history');
-Route::delete('/orders/{order_id}', [OrderController::class, 'deleteOrder'])->name('orders.delete');
+Route::get('/history', [OrderController::class, 'viewHistory'])->name('orders.history');
+Route::delete('/history/{order_id}', [OrderController::class, 'deleteOrder'])->name('orders.delete');
 
 Route::resource('products', ProductController::class);
 Route::resource('reviews', ReviewController::class);
