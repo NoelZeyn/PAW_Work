@@ -54,3 +54,4 @@ class KeranjangController extends Controller
         return redirect()->route('keranjang.index');
     }
 }
+
