@@ -33,11 +33,6 @@ class KeranjangController extends Controller
         return redirect()->route('keranjang.index');
     }
 
-    public function edit(Keranjang $keranjang)
-    {
-        return view('keranjang.edit', compact('keranjang'));
-    }
-
     public function update(Request $request, Keranjang $keranjang)
     {
         $validated = $request->validate([
