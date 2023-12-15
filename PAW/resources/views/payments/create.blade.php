@@ -1,4 +1,6 @@
-<!-- Payment creation form -->
+@extends('layouts.app')
+
+@section('content')
 <h1>Create Payment</h1>
 <form method="post" action="{{ route('payments.store') }}">
     @csrf
@@ -13,3 +15,4 @@
     <br>
     <button type="submit">Submit Payment</button>
 </form>
+@endsection

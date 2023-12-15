@@ -6,7 +6,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your App Title</title>
-    <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">    
+    <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
+    <!-- Add this to the head section of your HTML file -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        // Add a smooth scroll effect for category links
+        $('.category-scroll a').on('click', function (event) {
+            if (this.hash !== '') {
+                event.preventDefault();
+                var hash = this.hash;
+
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function () {
+                    window.location.hash = hash;
+                });
+            }
+        });
+    });
+</script>
+    
     <!-- <link rel="stylesheet" href="{{ asset('css/styles.css') }}">     -->
     <!-- Add your stylesheets, scripts, or other head content here -->
 </head>
