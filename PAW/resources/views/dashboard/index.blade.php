@@ -27,8 +27,6 @@
 
 
     @if(request()->has('category_search') && count($products) > 0)
-    <!-- Display your search results here -->
-    <!-- resources/views/dashboard/index.blade.php -->
 
     @foreach($products as $product)
     <div>

@@ -23,6 +23,10 @@ class DashboardController extends Controller
                       $subq->where('name', 'like', "%$searchTerm%");
                   });
             });
+            $categoryExists = Category::where('name', 'like', "%$searchTerm%")->exists();
+            if (!$categoryExists) {
+                Category::create(['name' => $searchTerm]);
+            }
         }
 
         $products = $query->paginate(10);
