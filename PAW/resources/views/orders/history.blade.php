@@ -12,7 +12,7 @@
         @extends('layouts.app')
 
         @section('content')
-        <div class="kotak">
+        <div class="container">
             <h1>Riwayat Pesanan</h1>
 
             @if(session('success'))
