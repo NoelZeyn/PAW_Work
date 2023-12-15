@@ -1,6 +1,6 @@
 <!-- resources/views/categories/index.blade.php -->
 
-@extends('layouts.app')
+@extends('layouts.dashboard')
 
 @section('content')
     <h1>Categories</h1>

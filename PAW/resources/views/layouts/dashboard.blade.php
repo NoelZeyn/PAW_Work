@@ -9,29 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your App Title</title>
     <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-
-    <script>
-        $(document).ready(function() {
-            // Add a smooth scroll effect for category links
-            $('.category-scroll a').on('click', function(event) {
-                if (this.hash !== '') {
-                    event.preventDefault();
-                    var hash = this.hash;
-
-                    $('html, body').animate({
-                        scrollTop: $(hash).offset().top
-                    }, 800, function() {
-                        window.location.hash = hash;
-                    });
-                }
-            });
-        });
-    </script>
-
-    <!-- <link rel="stylesheet" href="{{ asset('css/styles.css') }}">     -->
-    <!-- Add your stylesheets, scripts, or other head content here -->
 </head>
 
 <body>
@@ -57,5 +36,7 @@
     <!-- Add your footer content here -->
 
 </body>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="{{ asset('js/dashboard.js') }}"></script>
 
 </html>
