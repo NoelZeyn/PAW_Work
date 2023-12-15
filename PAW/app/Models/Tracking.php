@@ -5,14 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Order extends Model
+class Tracking extends Model
 {
     use HasFactory;
-    protected $primaryKey = 'order_id';
+    protected $fillable = [
+        'status',
+    ];
 
-
-    public function tracking()
+    public function orders()
     {
-        return $this->hasMany(Tracking::class);
+        return $this->belongsTo(Order::class);
     }
 }
