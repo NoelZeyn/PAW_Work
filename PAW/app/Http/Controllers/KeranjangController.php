@@ -44,4 +44,9 @@ class KeranjangController extends Controller
 
         return response()->json(['message' => 'Item keranjang berhasil dihapus']);
     }
+    public function index()
+    {
+        $keranjangItems = Keranjang::all();
+        return view('keranjang.index', compact('keranjangItems'));
+    }
 }
