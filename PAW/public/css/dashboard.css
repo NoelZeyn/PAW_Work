@@ -1,0 +1,16 @@
+.category-scroll {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.category-scroll ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+
+.category-scroll li {
+    display: inline-block;
+    margin-right: 10px; /* Adjust the margin as needed */
+}
