@@ -8,7 +8,27 @@
     <title>Your App Title</title>
     <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
     <!-- Add this to the head section of your HTML file -->
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+
+        nav {
+            position: relative;
+            background-color: #032539; /* Warna 032539 */
+
+        }
+
+        .keranjang-icon {
+            position: absolute;
+            top: 10px; 
+            right: 10px;
+        }
+        .keranjang-icon a i {
+            color: #FA991C; /* Warna FA991C */
+        }
+
+
+    </style>
 
 <script>
     $(document).ready(function () {
@@ -41,7 +61,11 @@
             <li><a href="{{ route('products.index') }}">Products</a></li>
             <li><a href="{{ route('reviews.index') }}">Reviews</a></li>
             <li><a href="{{ route('users.index') }}">Users</a></li>
-            <li><a href="{{ route('users.index') }}">Users</a></li>
+            <li class="keranjang-icon">
+            <a href="{{ route('keranjang.index') }}">
+                <i class="fa fa-shopping-cart"></i>
+            </a>
+        </li>
             <!-- Add more navigation links as needed -->
         </ul>
     </nav>
