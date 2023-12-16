@@ -1,6 +1,5 @@
-<!-- resources/views/dashboard/products/index.blade.php -->
 
-@extends('layouts.dashboard') <!-- Assuming you have a layout file -->
+@extends('layouts.dashboard') 
 
 @section('content')
 <div class="container">
