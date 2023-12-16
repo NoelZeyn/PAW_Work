@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    @stack('css_dashboard')
 </head>
 
 <body>
@@ -25,10 +24,13 @@
             <li><a href="{{ route('products.index') }}">Products</a></li>
             <li><a href="{{ route('reviews.index') }}">Reviews</a></li>
             <li><a href="{{ route('users.index') }}">Users</a></li>
-            <li><a href="{{ route('tracking.index') }}">Tracking</a></li>
+            <li class="keranjang-icon">
+            <a href="{{ route('keranjang.index') }}">
+                <i class="fa fa-shopping-cart"></i>
+                </a>
+            </li>
             <!-- Add more navigation links as needed -->
         </ul>
-        <i class='bx bxs-cart' id="cart-icon"></i>
     </nav>
 
     <div>
@@ -40,5 +42,5 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="{{ asset('js/dashboard.js') }}"></script>
-@stack('js_dashboard')
+
 </html>
