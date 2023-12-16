@@ -5,11 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Dashboard extends Model
+class Tracking extends Model
 {
     use HasFactory;
-    public function category()
+    protected $fillable = [
+        'status',
+    ];
+
+    public function orders()
     {
-        return $this->belongsTo(Category::class);
+        return $this->belongsTo(Order::class);
     }
 }

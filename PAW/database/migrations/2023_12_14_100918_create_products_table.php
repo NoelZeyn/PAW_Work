@@ -14,8 +14,6 @@ class CreateProductsTable extends Migration
             $table->decimal('price', 10, 2);
             $table->unsignedBigInteger('category_id')->nullable();
             $table->timestamps();
-
-            // Add foreign key constraint
             $table->foreign('category_id')->references('category_id')->on('categories');
         });
     }

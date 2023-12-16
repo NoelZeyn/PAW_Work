@@ -10,6 +10,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\PaymentsController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\KeranjangController;
+use App\Http\Controllers\Dashboard\TrackingController as DashboardTrackingController;
 
 //Ahmad Akrom
 Route::get('/', [DashboardController::class, 'index'])->name('dashboard.index');
@@ -36,3 +37,11 @@ Route::put('/keranjang/{id}', [KeranjangController::class, 'update']);
 Route::delete('/keranjang/{id}', [KeranjangController::class, 'destroy']);
 
 Route::resource('keranjang', KeranjangController::class);
+
+
+//rehan
+//tracking for user
+// Route::resource('tracking', TrackingController::class, ['names' => 'tracking'])->except('store','show','destroy');
+Route::group(['prefix' => 'dashboard'], function () {
+    Route::resource('tracking', DashboardTrackingController::class, ['names' => 'tracking'])->except('store','show','destroy');
+});

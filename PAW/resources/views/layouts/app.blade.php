@@ -6,9 +6,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your App Title</title>
-    <link rel="stylesheet" href="{{ asset('css/styles.css') }}"> 
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
     {{-- <link rel="stylesheet" href="{{ asset('css/payments.css') }}"> --}}
     <!-- Add your stylesheets, scripts, or other head content here -->
+
 </head>
 <body>
 
@@ -21,6 +22,7 @@
             <li><a href="{{ route('products.index') }}">Products</a></li>
             <li><a href="{{ route('reviews.index') }}">Reviews</a></li>
             <li><a href="{{ route('users.index') }}">Users</a></li>
+
             <!-- Add more navigation links as needed -->
         </ul>
     </nav>
