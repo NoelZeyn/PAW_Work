@@ -1,0 +1,6 @@
+Konfirmasi bahwa semua kode telah selesai
+kumpulkan source kode dengan:
+ZIP
+HTTPS : https://github.com/NoelZeyn/PAW_Work.git
+SSH : git@github.com:NoelZeyn/PAW_Work.git
+GitHub Cli : gh repo clone NoelZeyn/PAW_Work
