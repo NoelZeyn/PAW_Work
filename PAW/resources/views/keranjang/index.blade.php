@@ -242,6 +242,12 @@
     .cart.active{
         right: 0;
     }
+    .product-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tambahkan baris ini */
+    }
     @media(max-width:1080px){
         .nav{
             padding: 15px;
